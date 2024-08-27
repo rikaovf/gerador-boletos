@@ -41,8 +41,8 @@ const createBoleto = () => {
     .comBeneficiario(beneficiario)
     .comPagador(pagador)
     .comBanco(new bancos.Itau())
-    .comValorBoleto(510.75) //Apenas duas casas decimais
-    .comNumeroDoDocumento("414509 3.4")
+    .comValorBoleto(config.valor) //Apenas duas casas decimais
+    .comNumeroDoDocumento(config.numero_doc)
     .comEspecieDocumento('DMI') //Duplicata de Venda Mercantil
     .comInstrucoes(instrucoes);
 }
